@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">InstabugTask</string>
+    <string name="progressActivityErrorButton">Try Again</string>
+    <string name="progressActivityEmptyTitlePlaceholder">Nothing Here</string>
+    <string name="progressActivityEmptyContentPlaceholder">We couldn\'t find anything.</string>
 </resources>
