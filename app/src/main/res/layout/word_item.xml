@@ -27,7 +27,8 @@
             android:maxLines="1"
             android:textSize="@dimen/_18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/divider"            app:layout_constraintEnd_toStartOf="@+id/frequency_number"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            app:layout_constraintEnd_toStartOf="@+id/frequency_number"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:textValue="@{word_value}" />
@@ -51,6 +52,8 @@
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_1dp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
             android:background="#EFEFEF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/word_text" />

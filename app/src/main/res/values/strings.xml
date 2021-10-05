@@ -3,4 +3,6 @@
     <string name="progressActivityErrorButton">Try Again</string>
     <string name="progressActivityEmptyTitlePlaceholder">Nothing Here</string>
     <string name="progressActivityEmptyContentPlaceholder">We couldn\'t find anything.</string>
+    <string name="search">Search</string>
+    <string name="sort">Sort</string>
 </resources>
