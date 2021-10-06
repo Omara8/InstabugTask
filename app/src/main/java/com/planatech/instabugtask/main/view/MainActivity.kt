@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.planatech.instabugtask.R
 import com.planatech.instabugtask.databinding.ActivityMainBinding
 import com.planatech.instabugtask.main.viewmodel.MainViewModel
+import com.planatech.instabugtask.utils.checkNetworkConnection
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -32,10 +33,23 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
+        checkNetworkConnection(binding!!)
 
         handleIntent(intent)
 
         setUpViewModel()
+    }
+
+    private fun checkNetworkConnection(binding: ActivityMainBinding) {
+        if (checkNetworkConnection(this))
+            binding.mainContent.showContent()
+        else
+            binding.mainContent.showError(
+                R.drawable.ic_baseline_error,
+                "Connect to the internet",
+                "Your device does not have a valid internet connection.",
+                "Retry"
+            ) { checkNetworkConnection(binding) }
     }
 
     private fun setUpViewModel() {
